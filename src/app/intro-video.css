@@ -1,0 +1,18 @@
+.intro-modal--video{width:min(760px,100%);max-height:min(92dvh,860px);overflow:auto;position:relative;background:var(--paper);padding:37px clamp(22px,5vw,52px) 29px;box-shadow:0 30px 100px #0005}
+.intro-modal--video>.modal-label{display:block;padding-right:38px}
+.intro-modal--video h2{font-size:clamp(32px,5vw,52px);line-height:1;letter-spacing:-.075em;margin:20px 0 22px}
+.avatar-video-empty{min-height:270px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:28px;background:radial-gradient(ellipse at 50% 40%,#f8f7f4 0%,#efeee7 42%,#e0e2d9 100%);color:var(--ink)}
+.video-empty-icon{width:54px;height:54px;border:1px solid rgba(16,24,32,.28);border-radius:50%;display:grid;place-items:center;padding-left:3px;color:#1d2530;font-size:21px;background:rgba(255,255,255,.2)}
+.avatar-video-empty strong{margin-top:17px;font:italic 22px var(--serif);color:var(--ink)}
+.avatar-video-empty p{max-width:400px;font-size:11px;line-height:1.7;color:#505d6a;margin:8px auto 17px}
+.video-upload-button{position:relative;cursor:pointer;min-height:42px}
+.video-upload-button input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+.video-upload-button:focus-within{outline:2px solid #738d21;outline-offset:4px}
+.avatar-video-preview{display:block;width:100%;max-height:390px;background:linear-gradient(180deg,#fafaf7,#e9e5de);object-fit:contain}
+.avatar-transcript{border-top:1px solid var(--line);margin-top:19px;padding-top:13px}
+.avatar-transcript>span{font:8px var(--mono);letter-spacing:.09em;color:#727269}
+.avatar-transcript p{font:italic 14px/1.65 var(--serif);color:#4e4e47;margin:8px 0 0}
+.video-persistence-note{font:8px/1.7 var(--mono);color:#77776f;margin:15px 0 0}
+.video-persistence-note strong{color:#4b4b44}
+.intro-modal--video .modal-close{z-index:2}
+@media(max-width:650px){.intro-modal--video{padding:32px 18px 22px}.intro-modal--video h2{font-size:34px;margin:17px 0}.avatar-video-empty{min-height:220px;padding:20px}.avatar-video-empty strong{font-size:20px}.avatar-transcript p{font-size:13px}}

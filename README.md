@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shantel Kisi — Portfolio
 
-## Getting Started
+A Next.js portfolio for Shantel Kisi, Computer Science MSc graduate, with project demonstrations and a fictional-data banking simulation.
 
-First, run the development server:
+## Run locally
 
-```bash
+Requires Node.js 20.9 or newer.
+
+```powershell
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Publish online
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is configured for a standard Next.js host such as Vercel. To publish it:
 
-## Learn More
+1. Push the repository to a Git provider such as GitHub.
+2. Import the repository into a Next.js hosting provider and deploy the `main` branch.
+3. Add the final public origin as the `NEXT_PUBLIC_SITE_URL` environment variable, for example `https://portfolio.example.org` (without a trailing slash), then redeploy.
+4. Add a custom domain in the hosting provider if desired.
+5. Check the public home page, `/banking-demo`, `/robots.txt`, `/sitemap.xml`, and `/llms.txt`.
 
-To learn more about Next.js, take a look at the following resources:
+The site generates canonical/social metadata and an absolute sitemap when `NEXT_PUBLIC_SITE_URL` is set. It explicitly allows common AI crawlers in `robots.txt`; `/llms.txt` provides a concise text index of the portfolio. These files make the public content easier for compatible crawlers and LLM tools to discover, but do not guarantee indexing or visibility in any particular model.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Media and repository size
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The project walkthroughs are served from `public/` and need to be included in the deployed site. The Water Support card uses `public/water support app 2 Project.mp4`. Keep a high-quality source backup outside the repository and confirm your hosting provider's media and deployment limits before publishing.
 
-## Deploy on Vercel
+## Public project notes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- The Water Support project is a prototype, not a connection to a water provider.
+- The banking project is a browser-based portfolio simulation. It uses fictional records in the visitor's local browser and is not a real banking service.
+- Add real GitHub, LinkedIn, and email links in `src/app/page.tsx` before sharing so employers have a way to reach you.
+- A real CV download is not currently configured.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Useful commands
+
+```powershell
+npm run build
+npm run start
+```

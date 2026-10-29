@@ -1,0 +1,18 @@
+.cinematic-portrait{position:relative;min-height:440px;overflow:hidden;background:#22231e;isolation:isolate}
+.cinematic-photo{object-fit:cover;object-position:center 42%;transform:scale(1.04);animation:portrait-drift 13s cubic-bezier(.45,0,.55,1) infinite alternate}
+.portrait-photo--full{object-fit:contain;object-position:center bottom;background:#deddd6;transform:none;animation:none}
+.cinematic-shade{position:absolute;inset:0;background:linear-gradient(180deg,#1415103b 0%,transparent 31%,transparent 53%,#141510c7 100%);pointer-events:none}
+.cinematic-portrait:after{content:"";position:absolute;z-index:1;inset:15px;border:1px solid #ffffff30;pointer-events:none}
+.cinematic-label{position:absolute;z-index:2;top:31px;left:31px;display:flex;align-items:center;gap:9px;color:#fff;font:8px var(--mono);letter-spacing:.12em;text-shadow:0 1px 8px #0008}
+.cinematic-label i{width:7px;height:7px;border-radius:50%;background:#d8f36a;box-shadow:0 0 0 4px #d8f36a38}
+.cinematic-bottom{position:absolute;z-index:2;left:30px;right:30px;bottom:27px;display:flex;align-items:center;justify-content:space-between;gap:10px;color:#fff;font:7px var(--mono);letter-spacing:.09em;text-shadow:0 1px 8px #0009}
+.cinematic-wave{display:flex;align-items:center;gap:3px;height:20px}
+.cinematic-wave i{width:2px;height:5px;border-radius:3px;background:#d8f36a;opacity:.7}
+.cinematic-portrait.is-speaking .cinematic-wave i{animation:cinematic-wave .48s ease-in-out infinite alternate;opacity:1}
+.cinematic-wave i:nth-child(2){animation-delay:.12s}.cinematic-wave i:nth-child(3){animation-delay:.23s}.cinematic-wave i:nth-child(4){animation-delay:.34s}.cinematic-wave i:nth-child(5){animation-delay:.17s}
+.cinematic-fallback{position:absolute;inset:0;display:grid;place-items:center;background:radial-gradient(circle,#56584b,#22231e);font:italic 125px var(--serif);color:#d8f36a}
+@keyframes portrait-drift{from{transform:scale(1.04) translate3d(-.5%,0,0)}to{transform:scale(1.11) translate3d(.5%,-1%,0)}}
+@keyframes cinematic-wave{to{height:17px;opacity:.58}}
+@media(max-width:650px){.cinematic-portrait{min-height:180px}.cinematic-label{top:22px;left:22px;font-size:7px}.cinematic-bottom{left:22px;right:22px;bottom:21px;font-size:6px}.cinematic-portrait:after{inset:10px}}
+@media(max-height:560px) and (min-width:651px){.cinematic-portrait{min-height:0;height:92dvh;max-height:440px}}
+@media(prefers-reduced-motion:reduce){.cinematic-photo{animation:none;transform:scale(1.03)}.cinematic-portrait.is-speaking .cinematic-wave i{animation:none;height:9px}}

@@ -1,0 +1,11 @@
+.avatar-reference-frame{position:relative;width:100%;height:clamp(310px,58vh,560px);overflow:hidden;background:radial-gradient(ellipse at 50% 38%,#3c3e35,#1d1e1a);display:flex;align-items:center;justify-content:center}
+.avatar-reference-frame:after{content:"";position:absolute;inset:12px;border:1px solid #ffffff35;pointer-events:none}
+.avatar-reference-frame img{object-fit:contain;object-position:center bottom;animation:reference-photo-reveal 1s ease-out both}
+.avatar-reference-label{position:absolute;z-index:2;left:24px;bottom:23px;display:flex;align-items:center;gap:8px;padding:9px 12px;color:white;background:#171815bb;backdrop-filter:blur(8px);font:8px var(--mono);letter-spacing:.09em}
+.avatar-reference-label i{width:6px;height:6px;border-radius:50%;background:var(--lime)}
+.avatar-video-action{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-top:16px}
+.avatar-video-action p{max-width:390px;font-size:10px;line-height:1.65;color:#65655e;margin:0}
+.avatar-video-action .button{flex:0 0 auto;white-space:nowrap}
+@keyframes reference-photo-reveal{from{transform:scale(1.025);opacity:.75}to{transform:scale(1);opacity:1}}
+@media(max-width:650px){.avatar-reference-frame{height:clamp(300px,52vh,480px)}.avatar-reference-label{left:17px;bottom:17px;font-size:7px}.avatar-video-action{align-items:flex-start;flex-direction:column;gap:13px}.avatar-video-action p{font-size:10px}.avatar-video-action .button{width:100%}}
+@media(prefers-reduced-motion:reduce){.avatar-reference-frame img{animation:none}}
