@@ -1,4 +1,8 @@
-const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+const configuredSiteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL?.trim() ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL.trim()}`
+    : undefined);
 
 export function getSiteUrl(): URL | undefined {
   if (!configuredSiteUrl) return undefined;

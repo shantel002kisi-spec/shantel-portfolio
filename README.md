@@ -23,7 +23,7 @@ This project is configured for a standard Next.js host such as Vercel. To publis
 4. Add a custom domain in the hosting provider if desired.
 5. Check the public home page, `/banking-demo`, `/robots.txt`, `/sitemap.xml`, and `/llms.txt`.
 
-The site generates canonical/social metadata and an absolute sitemap when `NEXT_PUBLIC_SITE_URL` is set. It explicitly allows common AI crawlers in `robots.txt`; `/llms.txt` provides a concise text index of the portfolio. These files make the public content easier for compatible crawlers and LLM tools to discover, but do not guarantee indexing or visibility in any particular model.
+The site generates canonical/social metadata and an absolute sitemap from `NEXT_PUBLIC_SITE_URL`, or from Vercel's production URL when deployed there. It explicitly allows common AI crawlers in `robots.txt`; `/llms.txt` provides a concise text index of the portfolio. These files make the public content easier for compatible crawlers and LLM tools to discover, but do not guarantee indexing or visibility in any particular model.
 
 ## Media and repository size
 
