@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "./portfolio-tweaks.css";
 @import "./portrait-intro.css";
 
 :root{--ink:#101820;--paper:#f4f1eb;--white:#fff;--muted:#58606c;--line:#dfe5ea;--lime:#d4ee74;--serif:Georgia,"Times New Roman",serif;--sans:var(--font-geist-sans),Arial,sans-serif;--mono:var(--font-geist-mono),monospace}
@@ -149,3 +148,8 @@ body{background:#ffffff;color:#111a25}
 .main-nav a:hover:after,.main-nav a:focus-visible:after{right:0}
 @media(hover:none),(pointer:coarse){.project-card:hover{transform:none}.project-card:hover .project-visual:after{opacity:0}.project-art-wrap{transform:none!important}}
 @media(prefers-reduced-motion:reduce){.scroll-progress-fill{will-change:auto}.project-art-wrap{transition:none;transform:none!important}.project-card,.project-visual:after,.main-nav a:after,.project-index,.project-visual-foot{transition:none!important}}
+.hero-specialty{display:flex;align-items:center;gap:12px;margin:0 0 16px;font-family:var(--mono)}
+.hero-specialty>span{font-size:8px;letter-spacing:.08em;color:#898981}
+.hero-specialty strong{font:italic 16px var(--serif);color:#667d22}
+.hero-actions{flex-wrap:wrap}
+.cv-placeholder{color:#77776f;border-style:dashed;cursor:default;font:8px var(--mono);letter-spacing:.04em}
